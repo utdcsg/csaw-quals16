@@ -9,7 +9,6 @@
 * [Kill](forensics/kill.md)
 * [evidence.zip](forensics/evidence.md)
 * [Clams Don't Dance](forensics/clamsdontdance.md)
-* [Fuzyll](forensics/fuzyll.md)
 
 ### Misc
 * [Coinslot](misc/coinslot.md)
@@ -20,6 +19,7 @@
 
 ### Recon
 * [Eric Zhi Lang](recon/ericzhilang.md)
+* [Fuzyll](forensics/fuzyll.md)
 
 ### Reversing
 * [Gametime](reversing/gametime.md)
