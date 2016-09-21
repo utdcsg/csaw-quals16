@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [About](README.md)
 
 ### Crypto
 * [Notesy 2.0](crypto/notesy2.md)
