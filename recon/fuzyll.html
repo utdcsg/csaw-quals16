@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Eric Zhi Lang · GitBook</title>
+        <title>Fuzyll · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="fuzyll.html" />
+    <link rel="next" href="../reversing/gametime.md" />
     
     
-    <link rel="prev" href="../pwn/warmup.md" />
+    <link rel="prev" href="ericzhilang.html" />
     
 
     </head>
@@ -228,7 +228,7 @@
         
         
     
-        <li class="chapter active" data-level="6.1" data-path="ericzhilang.html">
+        <li class="chapter " data-level="6.1" data-path="ericzhilang.html">
             
                 <a href="ericzhilang.html">
             
@@ -241,7 +241,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2" data-path="fuzyll.html">
+        <li class="chapter active" data-level="6.2" data-path="fuzyll.html">
             
                 <a href="fuzyll.html">
             
@@ -330,7 +330,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Eric Zhi Lang</a>
+        <a href=".." >Fuzyll</a>
     </h1>
 </div>
 
@@ -345,43 +345,45 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="eric-zhi-liang">Eric Zhi Liang</h1><p>We tried very hard to find Eric last year. You&apos;re going to have to try just as hard this year, since not even his friends can find him.</p><p>We heard Eric has his own subreddit. Can you find Eric for us?</p><h2 id="solution">Solution</h2><ul><li>Googled &#x201C;Eric Liang Reddit&#x201D;
-</li>
-<li>Found <a href="https://www.reddit.com/r/ericliang/" target="_blank">https://www.reddit.com/r/ericliang/</a>
-</li>
-<li>theRealEricLiang was one of the moderators
-</li>
-<li>Looked through theRealEricLiang&#x2019;s comments and posts
-</li>
-<li>Found a post by Eric mentioning he went to a Hackster Meetup in NYC
-</li>
-<li>Googled &#x201C;Hackster Meetup in NYC&#x201D;
-</li>
-<li>Found <a href="http://www.meetup.com/Hackster-NYC/" target="_blank">http://www.meetup.com/Hackster-NYC/</a>
-</li>
-<li>Searched member database for &#x201C;Eric&#x201D;
-</li>
-<li>Found Eric&#x2019;s profile page on the new site: <a href="http://www.meetup.com/Hackster-NYC/members/175983362/" target="_blank">http://www.meetup.com/Hackster-NYC/members/175983362/</a>
-</li>
-<li>Found his profile info: &#x201C;I love fanfiction and Allen Lau!&#x201D;
-</li>
-<li>Googled Allen Lau
-</li>
-<li>Found that Allen Lau is the CEO and co-founder of something called Wattpad
-</li>
-<li>Googled Wattpad and found that it was a website
-</li>
-<li>Noticed a &#x201C;fanfiction&#x201D; section on the <a href="https://www.wattpad.com/stories/fanfiction" target="_blank">Wattpad website</a>
-</li>
-<li>Searched for &#x201C;Eric Liang&#x201D; in the search bar 
-</li>
-<li>Eric Zhi Liang is the first result for &#x201C;People&#x201D; on the right
-</li>
-<li>Eric Zhi Liang&#x2019;s profile: <a href="https://www.wattpad.com/user/ericZhiLiang" target="_blank">https://www.wattpad.com/user/ericZhiLiang</a>
-</li>
-<li>Found flag in his profile description
-</li></ul>
-<h2 id="flag">Flag</h2><pre><code>flag{i_readbear_fanfix}</code></pre>
+                                <h1 id="fuzyll">Fuzyll</h1><p>All files are lowercase with no spaces. 
+Start here: <a href="http://fuzyll.com/files/csaw2016/start" target="_blank">http://fuzyll.com/files/csaw2016/start</a></p><h2 id="solution">Solution</h2><p>A quick Google search reveals the author&#x2019;s twitter, where he complains about 
+not realizing the Walgreens sign is red. A search for red colorblindness turns
+up deuteranopia, which doesn&#x2019;t work, though the lesser form of the condition, 
+deuteranomaly, does.</p><p><a href="http://fuzyll.com/files/csaw2016/deuteranomaly" target="_blank">http://fuzyll.com/files/csaw2016/deuteranomaly</a> is a picture of green 
+strawberries. Running it through an EXIV viewer reveals that it has a 
+description: &#x201C;CSAW 2016 FUZYLL RECON PART 2 OF ?: No, strawberries don&apos;t look 
+exactly like this, but it&apos;s reasonably close. You know what else I can&apos;t see 
+well? /csaw2016/<the first="" defcon="" finals="" challenge="" i="" ever="" scored="" points="" on="">.&#x201D;</the></p><p>On the author&#x2019;s linkedin page, under Honors and Awards, he lists his team coming
+in third in DEFCON 19. His GitHub has a repository with challenge names. Trying
+each challenge from DEFCON 19 reveals the next step of the challenge:
+<a href="http://fuzyll.com/files/csaw2016/tomato" target="_blank">http://fuzyll.com/files/csaw2016/tomato</a></p><p>Running this text through the correct encoding (Ext Alpha Lowercase) reveals the
+next clue: &#x201C;CSAW 2016 FUZYLL RECON PART 3 of ?: I don&apos;t even like tomatoes! 
+Anyway, outside of CTFs, I&apos;ve been playing a fair amount of World of WarCraft 
+over the past year (never thought I&apos;d be saying that after Cataclysm, but here
+we are). The next part is at /csaw2016/&lt;my main WoW character&apos;s name&gt;.&#x201D;</p><p>The author&#x2019;s YouTube channel has a bunch of WoW videos. His username is 
+&#x201C;Elmrik&#x201D;.</p><p><a href="http://fuzyll.com/files/csaw2016/elmrik" target="_blank">http://fuzyll.com/files/csaw2016/elmrik</a>
+describes a function to encode a string, and gives the output. 
+Decoding the string: &#x201C;CSAW 2016 FUZYLL RECON PART 4 OF ?: In addition to WoW 
+raiding, I&apos;ve also been playing a bunch of Smash Bros. This year, I competed in 
+my first major tournament! I got wrecked in every event I competed in, but I 
+still had fun being in the crowd. This tournament in particular had a number of
+upsets (including Ally being knocked into losers of my Smash 4 pool). On stream,
+after one of these big upsets in Smash 4, you can see me in the crowd with a 
+shirt displaying my main character! The next part is at 
+/csaw2016/&lt;the winning player&apos;s tag&gt;.&#x201D;</p><p>You could try trawling through streams, but that&#x2019;s tedious and takes a lot of 
+time. Anyways, I found a reddit thread with all the &#x201C;upsets&#x201D; from the 
+tournament: 
+<a href="https://www.reddit.com/r/smashbros/comments/4pnkud/ceo_2016_smash_4_singles_upsets_day_1/" target="_blank">https://www.reddit.com/r/smashbros/comments/4pnkud/ceo_2016_smash_4_singles_upsets_day_1/</a>. 
+Trying all of the winners in sequence revealed that &#x201C;Jade&#x201D; was the answer.</p><p><a href="http://fuzyll.com/files/csaw2016/jade" target="_blank">http://fuzyll.com/files/csaw2016/jade</a> 
+gives &#x201C;jade.gz&#x201D;, containing an image file, &#x201C;jade&#x201D;. This image similarly has 
+metadata: &#x201C;CSAW 2016 FUZYLL RECON PART 5 OF 6: I haven&apos;t spent the entire year 
+playing video games, though. This past March, I spent time completely away from 
+computers in Peru. This shot is from one of the more memorable stops along my 
+hike to Machu Picchu. To make things easier on you, use only ASCII:
+/csaw2016/<the name="" of="" these="" ruins="">.&#x201D; I don&#x2019;t have a better solution than to 
+brute-force landmark names around Machu Picchu. Anyways, the answer is Winay 
+Wayna.</the></p><p><a href="http://fuzyll.com/files/csaw2016/winaywayna" target="_blank">http://fuzyll.com/files/csaw2016/winaywayna</a> 
+has the flag, finally.</p><h2 id="flag">Flag</h2><pre><code>flag{WH4T_4_L0NG_4ND_STR4NG3_TRIP_IT_H45_B33N}</code></pre>
 
                                 
                                 </section>
@@ -409,12 +411,12 @@
 
             
                 
-                <a href="../pwn/warmup.md" class="navigation navigation-prev " aria-label="Previous page: Warmup">
+                <a href="ericzhilang.html" class="navigation navigation-prev " aria-label="Previous page: Eric Zhi Lang">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="fuzyll.html" class="navigation navigation-next " aria-label="Next page: Fuzyll">
+                <a href="../reversing/gametime.md" class="navigation navigation-next " aria-label="Next page: Gametime">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -425,7 +427,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"value":10,"category":"Recon","title":"Eric Zhi Lang","level":"6.1","depth":1,"next":{"title":"Fuzyll","level":"6.2","depth":1,"path":"recon/fuzyll.md","ref":"recon/fuzyll.md","articles":[]},"previous":{"title":"Warmup","level":"5.1","depth":1,"path":"pwn/warmup.md","ref":"pwn/warmup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recon/ericzhilang.md","mtime":"2016-09-21T06:25:29.651Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-21T06:26:12.222Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"value":200,"category":"Recon","author":"Alan Huang","title":"Fuzyll","level":"6.2","depth":1,"next":{"title":"Gametime","level":"7.1","depth":1,"path":"reversing/gametime.md","ref":"reversing/gametime.md","articles":[]},"previous":{"title":"Eric Zhi Lang","level":"6.1","depth":1,"path":"recon/ericzhilang.md","ref":"recon/ericzhilang.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recon/fuzyll.md","mtime":"2016-09-21T06:25:43.496Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-21T06:26:12.222Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
