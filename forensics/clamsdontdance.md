@@ -18,4 +18,4 @@ barcode, which, when decoded, reveals the flag.
 
 ## Flag 
 
-flag{TH1NK ABOUT 1T B1LL. 1F u D13D, WOULD ANY1 CARE??}
+	flag{TH1NK ABOUT 1T B1LL. 1F u D13D, WOULD ANY1 CARE??}

@@ -19,7 +19,7 @@
 
 ### Recon
 * [Eric Zhi Lang](recon/ericzhilang.md)
-* [Fuzyll](forensics/fuzyll.md)
+* [Fuzyll](recon/fuzyll.md)
 
 ### Reversing
 * [Gametime](reversing/gametime.md)

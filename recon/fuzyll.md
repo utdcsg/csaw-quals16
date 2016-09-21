@@ -68,4 +68,4 @@ has the flag, finally.
 
 ## Flag
 
-flag{WH4T_4_L0NG_4ND_STR4NG3_TRIP_IT_H45_B33N}
+	flag{WH4T_4_L0NG_4ND_STR4NG3_TRIP_IT_H45_B33N}

@@ -13,7 +13,7 @@ actually made it in there...
 
 ## Solution
 
-%unning the zip file through strings reveals some interesting strings at 
+Running the zip file through strings reveals some interesting strings at 
 the end of the file:
 
 	galf
@@ -38,4 +38,4 @@ These segments reversed give you the flag
 
 ## Flag
 
-flag{th3_vi11ian_w3_n33d_#freeleffen}
+	flag{th3_vi11ian_w3_n33d_#freeleffen}

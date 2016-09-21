@@ -32,4 +32,4 @@ We heard Eric has his own subreddit. Can you find Eric for us?
 
 ## Flag
 
-flag{i_readbear_fanfix}
+	flag{i_readbear_fanfix}
