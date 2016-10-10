@@ -1,0 +1,588 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Deedeedee · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="key.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Forensics</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../forensics/kill.html">
+            
+                <a href="../forensics/kill.html">
+            
+                    
+                    Kill
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../forensics/evidence.html">
+            
+                <a href="../forensics/evidence.html">
+            
+                    
+                    evidence.zip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../forensics/clamsdontdance.html">
+            
+                <a href="../forensics/clamsdontdance.html">
+            
+                    
+                    Clams Don't Dance
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Pwn</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../pwn/warmup.html">
+            
+                <a href="../pwn/warmup.html">
+            
+                    
+                    Warmup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../pwn/tutorial.html">
+            
+                <a href="../pwn/tutorial.html">
+            
+                    
+                    Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Recon</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../recon/ericzhilang.html">
+            
+                <a href="../recon/ericzhilang.html">
+            
+                    
+                    Eric Zhi Lang
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../recon/fuzyll.html">
+            
+                <a href="../recon/fuzyll.html">
+            
+                    
+                    Fuzyll
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Reversing</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="key.html">
+            
+                <a href="key.html">
+            
+                    
+                    Key
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.2" data-path="deedeedee.html">
+            
+                <a href="deedeedee.html">
+            
+                    
+                    Deedeedee
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Deedeedee</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="deedeedee">deedeedee</h1><p>Wow! I can run code at compile time! That&apos;s a pretty cool way to keep my flags 
+secret. Hopefully I didn&apos;t leave any clues behind...</p><h1 id="solution">Solution</h1><p>Write up by: SneakyNachos</p><p>I first run the binary to get a lay of the land and get maybe an idea of what I&apos;m dealing with.</p><pre><code>$ ./deedeedee 
+Your hexencoded, encrypted flag is: 676c60677a74326d716c6074325f6c6575347172316773616c6d686e665f68735e6773385e345e3377657379316e327d
+I generated it at compile time. :)
+Can you decrypt it for me?</code></pre>
+<p>Things to take into consideration is the clue &quot;compile time&quot; and the hex 
+encoded-flag they spit out. Seems like a pre-generated key-gen.</p><p>First I did a quick &quot;file&quot; and &quot;nm -g -C&quot; command and came to a quick conclusion
+that there was a crazy amount of functions packed into this binary.</p><pre><code>$ file deedeedee
+deedeedee: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.24, BuildID[sha1]=4fac9c863749015d039a3bf0a3a6c936f2f7eadd, not stripped
+
+$ nm -g -C deedeedee
+
+000000000049434c T _aaDelX
+0000000000476fa8 T _aaEqual
+00000000004770d4 T _aaGetHash
+0000000000476bc8 T _aaGetY
+0000000000476f04 T _aaInX
+0000000000494504 T _aaKeys
+0000000000476b50 T _aApplycd1
+U abort@@GLIBC_2.2.5
+0000000000489e98 T _adEq2
+0000000000489edc T __alloca
+U backtrace@@GLIBC_2.2.5
+U backtrace_symbols_fd@@GLIBC_2.2.5
+U backtrace_symbols@@GLIBC_2.2.5
+00000000006cf870 B __bss_start
+U calloc@@GLIBC_2.2.5
+U clearerr@@GLIBC_2.2.5
+U clock_getres@@GLIBC_2.2.5
+U clock_gettime@@GLIBC_2.2.5
+U close@@GLIBC_2.2.5
+...snipped...</code></pre>
+<p>So instead of looking through all this silliness I decided to grep for flag and 
+see if there was a function that stood out.</p><pre><code>$nm -g -C deedeedee | grep flag | less
+
+000000000047b370 T _D2rt8typeinfo7ti_void10TypeInfo_v5flagsMxFNaNbNdNiNeZk
+0000000000497d20 T _D2rt8typeinfo8ti_float10TypeInfo_f5flagsMxFNaNbNdNiNfZk
+0000000000475968 T _D6object10ModuleInfo5flagsMxFNaNbNdZk
+00000000004807f4 T _D6object14TypeInfo_Array5flagsMxFNaNbNdNiNfZk
+0000000000475224 T _D6object14TypeInfo_Class5flagsMxFNaNbNdNiNfZk
+0000000000475788 T _D6object14TypeInfo_Const5flagsMxFNaNbNdNiNfZk
+00000000004755bc T _D6object15TypeInfo_Struct5flagsMxFNaNbNdNiNfZk
+0000000000497e78 T _D6object15TypeInfo_Vector5flagsMxFNaNbNdNiNfZk
+0000000000474ee0 T _D6object16TypeInfo_Pointer5flagsMxFNaNbNdNiNfZk
+00000000004804b8 T _D6object16TypeInfo_Typedef5flagsMxFNaNbNdNiNfZk
+00000000004809c8 T _D6object18TypeInfo_Interface5flagsMxFNaNbNdNiNfZk
+000000000048f5dc T _D6object20TypeInfo_StaticArray5flagsMxFNaNbNdNiNfZk
+0000000000475068 T _D6object25TypeInfo_AssociativeArray5flagsMxFNaNbNdNiNfZk
+0000000000474d78 T _D6object8TypeInfo5flagsMxFNaNbNdNiNfZk
+0000000000000010 D _D9deedeedee8enc_flagAya</code></pre>
+<p>That bottom one &quot;_D9deedeedee8enc_flagAya&quot; looks nice.</p><p>So let&apos;s go ahead and pop open a disassembler like radare2/Ida/binary ninja or just plain gdb and have a look at that function.</p><p>I also decided to have a quick look at main, because of the clue &quot;ran at compile time&quot; when executing the binary.</p><p>First I create simple test.gdb script for gdb to execute and have a peak at &quot;main&quot;.</p><h2 id="contents-of-testgdb">Contents of test.gdb</h2><pre><code>set height 0
+set width 0
+set disassembly-flavor intel</code></pre>
+<p>Then run gdb and dump main</p><pre><code>gdb -q deedeedee -command=test2.gdb
+Reading symbols from deedeedee...(no debugging symbols found)...done.
+(gdb) x/6i main
+0x474b08 &lt;main&gt;:    push   rbp
+0x474b09 &lt;main+1&gt;:    mov    rbp,rsp
+0x474b0c &lt;main+4&gt;:    mov    edx,0x44e408
+0x474b11 &lt;main+9&gt;:    call   0x47738c &lt;_d_run_main&gt;
+0x474b16 &lt;main+14&gt;:    pop    rbp
+0x474b17 &lt;main+15&gt;:    ret    </code></pre>
+<p>The &quot;main&quot; function here looks pretty suspicious of a higher-level language. 
+After a quick google &quot;_d_run_main&quot; shows up from the programming language &quot;D&quot;.</p><p>I guess the questions name &quot;deedeedee&quot; finally makes sense.</p><p>Now to dump &quot;_D9deedeedee8enc_flagAya&quot;. I got the address &quot;0x44cde0&quot; from binary
+ninja.</p><pre><code>(gdb) x/20i 0x44cde0
+0x44cde0 &lt;_D9deedeedee7encryptFNaNfAyaZAya&gt;:    push   rbp
+0x44cde1 &lt;_D9deedeedee7encryptFNaNfAyaZAya+1&gt;:    mov    rbp,rsp
+0x44cde4 &lt;_D9deedeedee7encryptFNaNfAyaZAya+4&gt;:    sub    rsp,0x10
+0x44cde8 &lt;_D9deedeedee7encryptFNaNfAyaZAya+8&gt;:    mov    QWORD PTR [rbp-0x10],rdi
+0x44cdec &lt;_D9deedeedee7encryptFNaNfAyaZAya+12&gt;:    mov    QWORD PTR [rbp-0x8],rsi
+0x44cdf0 &lt;_D9deedeedee7encryptFNaNfAyaZAya+16&gt;:    mov    rdx,QWORD PTR [rbp-0x8]
+0x44cdf4 &lt;_D9deedeedee7encryptFNaNfAyaZAya+20&gt;:    mov    rax,QWORD PTR [rbp-0x10]
+0x44cdf8 &lt;_D9deedeedee7encryptFNaNfAyaZAya+24&gt;:    mov    rdi,rax
+0x44cdfb &lt;_D9deedeedee7encryptFNaNfAyaZAya+27&gt;:    mov    rsi,rdx
+0x44cdfe &lt;_D9deedeedee7encryptFNaNfAyaZAya+30&gt;:    call   0x451470 &lt;_D9deedeedee21__T3encVAyaa3_313131Z3encFNaNfAyaZAya&gt;
+0x44ce03 &lt;_D9deedeedee7encryptFNaNfAyaZAya+35&gt;:    mov    rdi,rax
+0x44ce06 &lt;_D9deedeedee7encryptFNaNfAyaZAya+38&gt;:    mov    rsi,rdx
+0x44ce09 &lt;_D9deedeedee7encryptFNaNfAyaZAya+41&gt;:    call   0x458280 &lt;_D9deedeedee21__T3encVAyaa3_323232Z3encFNaNfAyaZAya&gt;
+0x44ce0e &lt;_D9deedeedee7encryptFNaNfAyaZAya+46&gt;:    mov    rdi,rax
+0x44ce11 &lt;_D9deedeedee7encryptFNaNfAyaZAya+49&gt;:    mov    rsi,rdx
+0x44ce14 &lt;_D9deedeedee7encryptFNaNfAyaZAya+52&gt;:    call   0x458358 &lt;_D9deedeedee21__T3encVAyaa3_333333Z3encFNaNfAyaZAya&gt;
+0x44ce19 &lt;_D9deedeedee7encryptFNaNfAyaZAya+57&gt;:    mov    rdi,rax
+0x44ce1c &lt;_D9deedeedee7encryptFNaNfAyaZAya+60&gt;:    mov    rsi,rdx
+0x44ce1f &lt;_D9deedeedee7encryptFNaNfAyaZAya+63&gt;:    call   0x458430 &lt;_D9deedeedee21__T3encVAyaa3_343434Z3encFNaNfAyaZAya&gt;
+0x44ce24 &lt;_D9deedeedee7encryptFNaNfAyaZAya+68&gt;:    mov    rdi,rax
+...snipped...</code></pre>
+<p>Well would you look at that 500 something encrypt functions. You can see the 
+assembly in a nicer format in img1.png of the first encrypt function.</p><p>The premise of the first encrypt function is a such.</p><pre><code>1.)Take in the string and size as arguments arg1 and arg2.
+2.)Using a number, in this case &quot;111&quot;, we convert the number to a Cycle. Which can be used in &quot;D&quot; like an array.
+3.)Take the string argument and convert to a cycle.
+4.)for loop over the size of the string argument cycle from step (3) and xor encode with the number cycle from step (2).
+5.)Then pop of the new xor encoded value and save into the temporary space.</code></pre>
+<p>So basically they have 500 xor based functions that each have their own string to
+xor against the flag.</p><p>At this point I wasn&apos;t recreating 500 freaking xor functions so I decided to find
+a route around having to do that.</p><p>Looking back at the output of the program there must be a function that is doing 
+the hex encoding of a string. My first thought was to steal that space of memory
+where the encrypted flag string was located at and the size. This would allow me
+to just fix up a gdb script with all the arguments replaced with the encrypted
+string and then change the code path to have the encrypted flag xor&apos;d through all
+the functions.</p><p>Let&apos;s grep for hex in the functions.</p><pre><code>$ nm -g -C deedeedee | grep hex
+0000000000498830 T _D4core8demangle8Demangle9ascii2hexFaZh
+000000000044e370 T _D9deedeedee9hexencodeFAyaZAya</code></pre>
+<p>That function &quot;_D9deedeedee9hexencodeFAyaZAya&quot; looks good. Looks like the 
+function resides at 0x44e370, after analyzing the true main in gdb.</p><pre><code>(gdb) x/5i main
+0x474b08 &lt;main&gt;:    push   rbp
+0x474b09 &lt;main+1&gt;:    mov    rbp,rsp
+0x474b0c &lt;main+4&gt;:    mov    edx,0x44e408
+0x474b11 &lt;main+9&gt;:    call   0x47738c &lt;_d_run_main&gt;
+0x474b16 &lt;main+14&gt;:    pop    rbp
+(gdb) x/20i 0x44e408
+0x44e408 &lt;_Dmain&gt;:    push   rbp
+0x44e409 &lt;_Dmain+1&gt;:    mov    rbp,rsp
+0x44e40c &lt;_Dmain+4&gt;:    sub    rsp,0x20
+0x44e410 &lt;_Dmain+8&gt;:    mov    QWORD PTR [rbp-0x18],rbx
+0x44e414 &lt;_Dmain+12&gt;:    mov    ecx,0x49f7a6
+0x44e419 &lt;_Dmain+17&gt;:    mov    eax,0x24
+0x44e41e &lt;_Dmain+22&gt;:    mov    rdx,rax
+0x44e421 &lt;_Dmain+25&gt;:    mov    QWORD PTR [rbp-0x10],rdx
+0x44e425 &lt;_Dmain+29&gt;:    mov    QWORD PTR [rbp-0x8],rcx
+0x44e429 &lt;_Dmain+33&gt;:    mov    rdx,QWORD PTR fs:0x0
+0x44e432 &lt;_Dmain+42&gt;:    mov    rbx,QWORD PTR [rip+0x274ba7]        # 0x6c2fe0
+0x44e439 &lt;_Dmain+49&gt;:    mov    rdi,QWORD PTR [rdx+rbx*1]
+0x44e43d &lt;_Dmain+53&gt;:    mov    rdx,QWORD PTR [rdx+rbx*1+0x8]
+0x44e442 &lt;_Dmain+58&gt;:    mov    rsi,rdx
+0x44e445 &lt;_Dmain+61&gt;:    call   0x44e370 &lt;_D9deedeedee9hexencodeFAyaZAya&gt;
+0x44e44a &lt;_Dmain+66&gt;:    mov    rdi,rax
+0x44e44d &lt;_Dmain+69&gt;:    mov    rcx,QWORD PTR [rbp-0x8]
+0x44e451 &lt;_Dmain+73&gt;:    mov    rsi,rdx
+0x44e454 &lt;_Dmain+76&gt;:    mov    rdx,QWORD PTR [rbp-0x10]
+0x44e458 &lt;_Dmain+80&gt;:    call   0x472f78 &lt;_D3std5stdio20__T7writelnTAyaTAyaZ7writelnFNfAyaAyaZv&gt;</code></pre>
+<p>Dumping the function &quot;_D9deedeedee9hexencodeFAyaZAya&quot;</p><pre><code>(gdb) x/20i 0x44e370
+0x44e370 &lt;_D9deedeedee9hexencodeFAyaZAya&gt;:    push   rbp
+0x44e371 &lt;_D9deedeedee9hexencodeFAyaZAya+1&gt;:    mov    rbp,rsp
+0x44e374 &lt;_D9deedeedee9hexencodeFAyaZAya+4&gt;:    sub    rsp,0x50
+0x44e378 &lt;_D9deedeedee9hexencodeFAyaZAya+8&gt;:    mov    QWORD PTR [rbp-0x48],rbx
+0x44e37c &lt;_D9deedeedee9hexencodeFAyaZAya+12&gt;:    mov    QWORD PTR [rbp-0x10],rdi
+0x44e380 &lt;_D9deedeedee9hexencodeFAyaZAya+16&gt;:    mov    QWORD PTR [rbp-0x8],rsi
+0x44e384 &lt;_D9deedeedee9hexencodeFAyaZAya+20&gt;:    mov    ecx,0x6cf8a0
+0x44e389 &lt;_D9deedeedee9hexencodeFAyaZAya+25&gt;:    xor    eax,eax
+0x44e38b &lt;_D9deedeedee9hexencodeFAyaZAya+27&gt;:    mov    QWORD PTR [rbp-0x40],rax
+0x44e38f &lt;_D9deedeedee9hexencodeFAyaZAya+31&gt;:    mov    QWORD PTR [rbp-0x38],rcx
+0x44e393 &lt;_D9deedeedee9hexencodeFAyaZAya+35&gt;:    mov    rdx,QWORD PTR [rbp-0x8]
+0x44e397 &lt;_D9deedeedee9hexencodeFAyaZAya+39&gt;:    mov    rax,QWORD PTR [rbp-0x10]
+0x44e39b &lt;_D9deedeedee9hexencodeFAyaZAya+43&gt;:    mov    QWORD PTR [rbp-0x30],rax
+0x44e39f &lt;_D9deedeedee9hexencodeFAyaZAya+47&gt;:    mov    QWORD PTR [rbp-0x28],rdx
+0x44e3a3 &lt;_D9deedeedee9hexencodeFAyaZAya+51&gt;:    mov    QWORD PTR [rbp-0x20],0x0
+0x44e3ab &lt;_D9deedeedee9hexencodeFAyaZAya+59&gt;:    mov    rbx,QWORD PTR [rbp-0x20]
+0x44e3af &lt;_D9deedeedee9hexencodeFAyaZAya+63&gt;:    cmp    rbx,QWORD PTR [rbp-0x30]
+0x44e3b3 &lt;_D9deedeedee9hexencodeFAyaZAya+67&gt;:    jae    0x44e3f6 &lt;_D9deedeedee9hexencodeFAyaZAya+134&gt;
+0x44e3b5 &lt;_D9deedeedee9hexencodeFAyaZAya+69&gt;:    mov    rdx,QWORD PTR [rbp-0x28]
+0x44e3b9 &lt;_D9deedeedee9hexencodeFAyaZAya+73&gt;:    mov    rax,QWORD PTR [rbp-0x30]</code></pre>
+<p>One spot stood out to me &quot;0x44e39b&quot;. This spot was when the arguments decided to
+flow back into the calling convention (rdx and rax). Hijacking this spot should
+allow me to use the memory region where they stored the string as the argument
+for the xor functions.</p><p>Let&apos;s make sure this is the case. I now have added a breakpoint and some prints
+to the script &quot;test.gdb&quot;</p><pre><code>set height 0
+set width 0
+set disassembly-flavor intel
+b* 0x44e39b
+commands 1
+    x/s $rdx
+    p $rax
+end</code></pre>
+<p>Now to see if the assumptions were correct.</p><pre><code>$ gdb -q deedeedee -command=test3.gdb
+Reading symbols from deedeedee...(no debugging symbols found)...done.
+Breakpoint 1 at 0x44e39b
+(gdb) r
+Starting program: /home/sneaky/Documents/csaw2016/re150/deedeedee 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library &quot;/lib/x86_64-linux-gnu/libthread_db.so.1&quot;.
+
+Breakpoint 1, 0x000000000044e39b in deedeedee.hexencode(immutable(char)[]) ()
+0x49f775:    &quot;gl`gzt2mql`t2_leu4qr1gsalmhnf_hs^gs8^4^3wesy1n2}&quot;
+$1 = 48</code></pre>
+<p>Cool the string seems to be loaded into rdx and the size into rax.</p><p>Now we just pick a spot at the top of the encryption function and let it run 
+from there and then catch the string at the bottom.</p><p>The spot chosen is location &quot;0x44cdf8&quot;. Which looks like the following below.</p><pre><code>(gdb) x/5i 0x44cdf8
+0x44cdf8 &lt;_D9deedeedee7encryptFNaNfAyaZAya+24&gt;:    mov    rdi,rax
+0x44cdfb &lt;_D9deedeedee7encryptFNaNfAyaZAya+27&gt;:    mov    rsi,rdx
+0x44cdfe &lt;_D9deedeedee7encryptFNaNfAyaZAya+30&gt;:    call   0x451470 &lt;_D9deedeedee21__T3encVAyaa3_313131Z3encFNaNfAyaZAya&gt;
+0x44ce03 &lt;_D9deedeedee7encryptFNaNfAyaZAya+35&gt;:    mov    rdi,rax
+0x44ce06 &lt;_D9deedeedee7encryptFNaNfAyaZAya+38&gt;:    mov    rsi,rdx</code></pre>
+<p>This piece of the encrypt flag code would pass off the arguments correctly and
+then let the string and size slide through the rest of the encrypt functions.</p><p>Now time for a new test.gdb to reflect the altered code path and the
+catching/printing of the final decrypted string.</p><pre><code>set height 0
+set width 0
+set disassembly-flavor intel
+b* 0x44e39b
+commands 1
+    printf &quot;Hex encoder end case&quot;
+    x/s $rdx
+    p $rax
+    set $pc = 0x44cdf8
+end
+
+b* 0x44e369
+commands 2
+    x/s $rdx
+    p $rax
+end
+
+r</code></pre>
+<p>The new changes to test.gdb has the program jump to 0x44cdf8 as seen in the 
+command &quot;set $pc = 0x44cdf8&quot;, and the final print could be anywhere at the bottom
+so &quot;0x44e369&quot; was chosen to be a good stopping point.</p><p>Now lets run and see.</p><pre><code>$ gdb -q deedeedee -command=test.gdb
+Reading symbols from deedeedee...(no debugging symbols found)...done.
+Breakpoint 1 at 0x44e39b
+Breakpoint 2 at 0x44e369
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library &quot;/lib/x86_64-linux-gnu/libthread_db.so.1&quot;.
+
+Breakpoint 1, 0x000000000044e39b in deedeedee.hexencode(immutable(char)[]) ()
+Hex encoder end case0x49f775:    &quot;gl`gzt2mql`t2_leu4qr1gsalmhnf_hs^gs8^4^3wesy1n2}&quot;
+$1 = 48
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x000000000044e369 in deedeedee.encrypt(immutable(char)[]) ()
+0x7ffff7ee7c80:    &quot;flag{t3mplat3_met4pr0gramming_is_gr8_4_3very0n3}&quot;
+$2 = 48</code></pre>
+<p>Huzzah re150 is complete.</p><h1 id="flag">Flag</h1><pre><code>flag{t3mplat3_met4pr0gramming_is_gr8_4_3very0n3}</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="key.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Key">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"value":150,"category":"Reversing","author":"SneakyNachos","title":"Deedeedee","level":"5.2","depth":1,"previous":{"title":"Key","level":"5.1","depth":1,"path":"reversing/key.md","ref":"reversing/key.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"reversing/deedeedee.md","mtime":"2016-10-10T19:41:50.116Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-10T19:43:09.832Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

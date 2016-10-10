@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Eric Zhi Lang · GitBook</title>
+        <title>Key · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="fuzyll.html" />
+    <link rel="next" href="deedeedee.html" />
     
     
-    <link rel="prev" href="../pwn/tutorial.html" />
+    <link rel="prev" href="../recon/fuzyll.html" />
     
 
     </head>
@@ -188,9 +188,9 @@
         
         
     
-        <li class="chapter active" data-level="4.1" data-path="ericzhilang.html">
+        <li class="chapter " data-level="4.1" data-path="../recon/ericzhilang.html">
             
-                <a href="ericzhilang.html">
+                <a href="../recon/ericzhilang.html">
             
                     
                     Eric Zhi Lang
@@ -201,9 +201,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="fuzyll.html">
+        <li class="chapter " data-level="4.2" data-path="../recon/fuzyll.html">
             
-                <a href="fuzyll.html">
+                <a href="../recon/fuzyll.html">
             
                     
                     Fuzyll
@@ -221,9 +221,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="../reversing/key.html">
+        <li class="chapter active" data-level="5.1" data-path="key.html">
             
-                <a href="../reversing/key.html">
+                <a href="key.html">
             
                     
                     Key
@@ -234,9 +234,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="../reversing/deedeedee.html">
+        <li class="chapter " data-level="5.2" data-path="deedeedee.html">
             
-                <a href="../reversing/deedeedee.html">
+                <a href="deedeedee.html">
             
                     
                     Deedeedee
@@ -277,7 +277,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Eric Zhi Lang</a>
+        <a href=".." >Key</a>
     </h1>
 </div>
 
@@ -292,43 +292,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="eric-zhi-liang">Eric Zhi Liang</h1><p>We tried very hard to find Eric last year. You&apos;re going to have to try just as hard this year, since not even his friends can find him.</p><p>We heard Eric has his own subreddit. Can you find Eric for us?</p><h2 id="solution">Solution</h2><p>Write up by: Stacy</p><ul><li>Googled &#x201C;Eric Liang Reddit&#x201D;
-</li>
-<li>Found <a href="https://www.reddit.com/r/ericliang/" target="_blank">https://www.reddit.com/r/ericliang/</a>
-</li>
-<li>theRealEricLiang was one of the moderators
-</li>
-<li>Looked through theRealEricLiang&#x2019;s comments and posts
-</li>
-<li>Found a post by Eric mentioning he went to a Hackster Meetup in NYC
-</li>
-<li>Googled &#x201C;Hackster Meetup in NYC&#x201D;
-</li>
-<li>Found <a href="http://www.meetup.com/Hackster-NYC/" target="_blank">http://www.meetup.com/Hackster-NYC/</a>
-</li>
-<li>Searched member database for &#x201C;Eric&#x201D;
-</li>
-<li>Found Eric&#x2019;s profile page on the new site: <a href="http://www.meetup.com/Hackster-NYC/members/175983362/" target="_blank">http://www.meetup.com/Hackster-NYC/members/175983362/</a>
-</li>
-<li>Found his profile info: &#x201C;I love fanfiction and Allen Lau!&#x201D;
-</li>
-<li>Googled Allen Lau
-</li>
-<li>Found that Allen Lau is the CEO and co-founder of something called Wattpad
-</li>
-<li>Googled Wattpad and found that it was a website
-</li>
-<li>Noticed a &#x201C;fanfiction&#x201D; section on the <a href="https://www.wattpad.com/stories/fanfiction" target="_blank">Wattpad website</a>
-</li>
-<li>Searched for &#x201C;Eric Liang&#x201D; in the search bar 
-</li>
-<li>Eric Zhi Liang is the first result for &#x201C;People&#x201D; on the right
-</li>
-<li>Eric Zhi Liang&#x2019;s profile: <a href="https://www.wattpad.com/user/ericZhiLiang" target="_blank">https://www.wattpad.com/user/ericZhiLiang</a>
-</li>
-<li>Found flag in his profile description
-</li></ul>
-<h2 id="flag">Flag</h2><pre><code>flag{i_readbear_fanfix}</code></pre>
+                                <h1 id="key">Key</h1><p>So I like to make my life difficult, and instead of a password manager, I make 
+challenges that keep my secrets hidden. I forgot how to solve this one and it is
+the key to my house... Can you help me out? It&apos;s getting a little cold out here.</p><p>NOTE: Flag is not in normal flag format.</p><h1 id="solution">Solution</h1><p>Write up by: SneakyNachos</p><p>The only file the question gives is &quot;key.exe&quot;</p><p>I decided first to drop the file into the IDA demo and have a look around.</p><p>The first thing I noticed was</p><pre><code>.rdata:004052B8 00000029 C C:\\Users\\CSAW2016\\haha\\flag_dir\\flag.txt</code></pre>
+<p>So I went ahead and created that file in my windows vm users directory.</p><p>Might take a few annoying permission changes to allow reading the file though.</p><p>After looking at the functions in IDA for a bit it seems as though they are 
+trying to hide what they are doing via virtual functions or something like that.</p><p>My initial guess is that there&apos;s really no encryption or key mangling going on.</p><p>They probably just put the string somewhere right before the check if the key is
+correct or not.</p><p>Virtual functions are bit iffy though. The string is probably hidden via a
+pointer in memory versus just a normal string comparison.</p><p>I decided the best place to breakpoint was in loc_401310 shown in img1.png. 
+This code block is found in function sub_401100.</p><p>The function sub_11420C0 looks interesting.</p><p><img alt="key1" src="../images/key1.png">
+<img alt="key2" src="../images/key2.png"></p><p>In img2.png I stopped at this particular spot because I had interesting strings
+show up in my registers. EAX had my fake flag value, but ECX had a string that I
+did not input.</p><p><img alt="key3" src="../images/key3.png"></p><p>In img3.png I hex dumped that memory region and the string &quot;idg_cni~bjbfi|gsxb&quot; 
+showed up.</p><p>So then I placed that in the flag.txt</p><p>and then I recieved the congrats shown in img4.png.</p><p><img alt="key4" src="../images/key4.png"></p><p>re125 complete.</p><h1 id="flag">Flag</h1><pre><code>idg_cni~bjbfi|gsxb</code></pre>
 
                                 
                                 </section>
@@ -356,12 +331,12 @@
 
             
                 
-                <a href="../pwn/tutorial.html" class="navigation navigation-prev " aria-label="Previous page: Tutorial">
+                <a href="../recon/fuzyll.html" class="navigation navigation-prev " aria-label="Previous page: Fuzyll">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="fuzyll.html" class="navigation navigation-next " aria-label="Next page: Fuzyll">
+                <a href="deedeedee.html" class="navigation navigation-next " aria-label="Next page: Deedeedee">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -372,7 +347,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"value":10,"category":"Recon","title":"Eric Zhi Lang","level":"4.1","depth":1,"next":{"title":"Fuzyll","level":"4.2","depth":1,"path":"recon/fuzyll.md","ref":"recon/fuzyll.md","articles":[]},"previous":{"title":"Tutorial","level":"3.2","depth":1,"path":"pwn/tutorial.md","ref":"pwn/tutorial.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recon/ericzhilang.md","mtime":"2016-10-10T18:01:39.488Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-10T19:43:09.832Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"value":125,"category":"Reversing","author":"SneakyNachos","title":"Key","level":"5.1","depth":1,"next":{"title":"Deedeedee","level":"5.2","depth":1,"path":"reversing/deedeedee.md","ref":"reversing/deedeedee.md","articles":[]},"previous":{"title":"Fuzyll","level":"4.2","depth":1,"path":"recon/fuzyll.md","ref":"recon/fuzyll.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"reversing/key.md","mtime":"2016-10-10T19:32:44.644Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-10T19:43:09.832Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

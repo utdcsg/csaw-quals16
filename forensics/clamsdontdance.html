@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../misc/coinslot.md" />
+    <link rel="next" href="../pwn/warmup.html" />
     
     
     <link rel="prev" href="evidence.html" />
@@ -105,31 +105,11 @@
 
     
         
-        <li class="header">Crypto</li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="../crypto/sleepingguard.md">
-            
-                <span>
-            
-                    
-                    Sleeping Guard
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
         <li class="header">Forensics</li>
         
         
     
-        <li class="chapter " data-level="3.1" data-path="kill.html">
+        <li class="chapter " data-level="2.1" data-path="kill.html">
             
                 <a href="kill.html">
             
@@ -142,7 +122,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="evidence.html">
+        <li class="chapter " data-level="2.2" data-path="evidence.html">
             
                 <a href="evidence.html">
             
@@ -155,7 +135,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="clamsdontdance.html">
+        <li class="chapter active" data-level="2.3" data-path="clamsdontdance.html">
             
                 <a href="clamsdontdance.html">
             
@@ -171,49 +151,29 @@
 
     
         
-        <li class="header">Misc</li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="../misc/coinslot.md">
-            
-                <span>
-            
-                    
-                    Coinslot
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="../misc/regexpire.md">
-            
-                <span>
-            
-                    
-                    Regexpire
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
         <li class="header">Pwn</li>
         
         
     
-        <li class="chapter " data-level="5.1" data-path="../pwn/warmup.md">
+        <li class="chapter " data-level="3.1" data-path="../pwn/warmup.html">
             
-                <span>
+                <a href="../pwn/warmup.html">
             
                     
                     Warmup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../pwn/tutorial.html">
+            
+                <a href="../pwn/tutorial.html">
+            
+                    
+                    Tutorial
             
                 </a>
             
@@ -228,7 +188,7 @@
         
         
     
-        <li class="chapter " data-level="6.1" data-path="../recon/ericzhilang.html">
+        <li class="chapter " data-level="4.1" data-path="../recon/ericzhilang.html">
             
                 <a href="../recon/ericzhilang.html">
             
@@ -241,7 +201,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.2" data-path="../recon/fuzyll.html">
+        <li class="chapter " data-level="4.2" data-path="../recon/fuzyll.html">
             
                 <a href="../recon/fuzyll.html">
             
@@ -261,22 +221,9 @@
         
         
     
-        <li class="chapter " data-level="7.1" data-path="../reversing/gametime.md">
+        <li class="chapter " data-level="5.1" data-path="../reversing/key.html">
             
-                <span>
-            
-                    
-                    Gametime
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="7.2" data-path="../reversing/key.md">
-            
-                <span>
+                <a href="../reversing/key.html">
             
                     
                     Key
@@ -287,12 +234,12 @@
             
         </li>
     
-        <li class="chapter " data-level="7.3" data-path="../reversing/deedeedee.md">
+        <li class="chapter " data-level="5.2" data-path="../reversing/deedeedee.html">
             
-                <span>
+                <a href="../reversing/deedeedee.html">
             
                     
-                    deedeedee
+                    Deedeedee
             
                 </a>
             
@@ -345,7 +292,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="clams-dont-dance">Clams don&apos;t dance</h1><p>Is kill can fix? Sign the autopsy file?</p><h2 id="solution">Solution</h2><p>Opening the .img file with an archive manager reveals assets for a powerpoint 
+                                <h1 id="clams-dont-dance">Clams don&apos;t dance</h1><p>Is kill can fix? Sign the autopsy file?</p><h2 id="solution">Solution</h2><p>Write up by: Alan Huang</p><p>Opening the .img file with an archive manager reveals assets for a powerpoint 
 presentation. There&#x2019;s an image, /ppt/media/image0.gif. This is a MaxiCode 
 barcode, which, when decoded, reveals the flag.</p><p><img alt="Maxicode" src="../images/clam.gif"></p><h2 id="flag">Flag</h2><pre><code>flag{TH1NK ABOUT 1T B1LL. 1F u D13D, WOULD ANY1 CARE??}</code></pre>
 
@@ -380,7 +327,7 @@ barcode, which, when decoded, reveals the flag.</p><p><img alt="Maxicode" src=".
                 </a>
                 
                 
-                <a href="../misc/coinslot.md" class="navigation navigation-next " aria-label="Next page: Coinslot">
+                <a href="../pwn/warmup.html" class="navigation navigation-next " aria-label="Next page: Warmup">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -391,7 +338,7 @@ barcode, which, when decoded, reveals the flag.</p><p><img alt="Maxicode" src=".
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"value":100,"category":"Forensics","author":"Alan Huang","title":"Clams Don't Dance","level":"3.3","depth":1,"next":{"title":"Coinslot","level":"4.1","depth":1,"path":"misc/coinslot.md","ref":"misc/coinslot.md","articles":[]},"previous":{"title":"evidence.zip","level":"3.2","depth":1,"path":"forensics/evidence.md","ref":"forensics/evidence.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"forensics/clamsdontdance.md","mtime":"2016-09-21T06:25:00.670Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-21T06:26:12.222Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"value":100,"category":"Forensics","author":"Alan Huang","title":"Clams Don't Dance","level":"2.3","depth":1,"next":{"title":"Warmup","level":"3.1","depth":1,"path":"pwn/warmup.md","ref":"pwn/warmup.md","articles":[]},"previous":{"title":"evidence.zip","level":"2.2","depth":1,"path":"forensics/evidence.md","ref":"forensics/evidence.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"forensics/clamsdontdance.md","mtime":"2016-10-10T18:00:39.300Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-10T19:43:09.832Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
