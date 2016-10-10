@@ -13,6 +13,8 @@ actually made it in there...
 
 ## Solution
 
+Write up by: Alan Huang
+
 Running the zip file through strings reveals some interesting strings at 
 the end of the file:
 

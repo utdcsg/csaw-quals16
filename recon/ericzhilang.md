@@ -11,6 +11,8 @@ We heard Eric has his own subreddit. Can you find Eric for us?
 
 ## Solution
 
+Write up by: Stacy 
+
 - Googled “Eric Liang Reddit”
 - Found [https://www.reddit.com/r/ericliang/](https://www.reddit.com/r/ericliang/)
 - theRealEricLiang was one of the moderators

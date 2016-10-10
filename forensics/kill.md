@@ -10,6 +10,8 @@ Is kill can fix? Sign the autopsy file?
 
 ## Solution
 
+Write up by: Alan Huang
+
 Simply running the given .pcapng file through strings reveals the flag
 
 ## Flag

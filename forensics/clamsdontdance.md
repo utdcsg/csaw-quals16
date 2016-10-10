@@ -10,6 +10,8 @@ Is kill can fix? Sign the autopsy file?
 
 ## Solution
 
+Write up by: Alan Huang
+
 Opening the .img file with an archive manager reveals assets for a powerpoint 
 presentation. There’s an image, /ppt/media/image0.gif. This is a MaxiCode 
 barcode, which, when decoded, reveals the flag.

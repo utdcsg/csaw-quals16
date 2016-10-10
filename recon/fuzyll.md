@@ -11,6 +11,8 @@ Start here: [http://fuzyll.com/files/csaw2016/start](http://fuzyll.com/files/csa
 
 ## Solution
 
+Write up by: Alan Huang
+
 A quick Google search reveals the author’s twitter, where he complains about 
 not realizing the Walgreens sign is red. A search for red colorblindness turns
 up deuteranopia, which doesn’t work, though the lesser form of the condition, 
